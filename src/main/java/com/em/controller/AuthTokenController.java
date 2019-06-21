@@ -34,8 +34,8 @@ public class AuthTokenController {
                                   @RequestParam(value = "timestamp") String timestamp,
                                   @RequestParam(value = "nonce") String nonce,
                                   @RequestParam(value = "echostr") String echostr) {
-        LOG.info("接口=======》");
         String[] arr = new String[]{TOKEN, timestamp, nonce};
+        //字典序排序
         Arrays.sort(arr);
         String tempSign = Arrays.toString(arr);
         String sign = EncryptUtils.sha1(tempSign.substring(1, tempSign.length() - 1));

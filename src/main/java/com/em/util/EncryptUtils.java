@@ -15,6 +15,12 @@ public class EncryptUtils {
             'a', 'b', 'c', 'd', 'e', 'f'};
 
 
+    /**
+     * 字符串SHA1加密
+     *
+     * @param str 原字符串
+     * @return 返回加密过的字符串
+     */
     public static String sha1(String str){
         if (null == str || 0 == str.length()){
             return null;
